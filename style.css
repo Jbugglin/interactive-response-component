@@ -48,30 +48,30 @@ main {
     border-radius: 50%;
 }
 
-ul {
+#ratingOption {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    border: 1px solid blue;
+    border: 1px solid red;
 }
 
-ul li {
-    list-style-type: none;
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    margin: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#ratingOption {
+    border: 1px solid green;
+    margin: auto;
 }
 
-li:hover {
+#ratingOption li:hover {
     cursor: pointer;
-    background-color: var(--neu-lightGrey);
+    background-color: var(--neu-mediumGrey);
     color: var(--neu-white);
+}
+
+li {
+    list-style-type: none;
+    border: 1px solid red;
+    border-radius: 50%;
+    margin: 0.25rem;
+    padding: 1rem;
 }
 
 #submitButton {
@@ -88,4 +88,13 @@ li:hover {
     background-color: var(--neu-white);
     color: var(--pri-orange);
     cursor: pointer;
+}
+
+.active {
+    background-color: red;
+    color: white;
+}
+
+#thankYouStart {
+    display: none;
 }
