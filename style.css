@@ -23,13 +23,16 @@ body {
     height: 100dvh;
     display: flex;
     flex-direction: column;
+    background-color: var(--neu-veryDarkBlue);
 }
 
 main {
+    background-color: var(--neu-darkBlue);
     width: 90%;
-    border: 1px solid black;
+    max-width: 325px;
+    max-height: 245;
     margin: auto;
-    height: min-content;
+    height: max-content;
     border-radius: 1rem;
     padding: 1rem;
     display: flex;
@@ -38,40 +41,57 @@ main {
     align-items: center;
 }
 
+#ratingStart {
+    margin: 0rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .starIcon {
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
+    scale: 0.75;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    margin: 0.5rem 0rem;
+    background-color: hsla(216, 12%, 54%, 0.223);
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--neu-white);
+}
+
+p {
+    font-size: 0.875rem;
+    color: var(--neu-lightGrey);
 }
 
 #ratingOption {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
-}
-
-#ratingOption {
-    border: 1px solid green;
-    margin: auto;
+    margin: 1rem 0rem;
 }
 
 #ratingOption li:hover {
     cursor: pointer;
-    background-color: var(--neu-mediumGrey);
+    background-color: var(--pri-orange);
     color: var(--neu-white);
 }
 
 li {
     list-style-type: none;
-    border: 1px solid red;
     border-radius: 50%;
-    margin: 0.25rem;
-    padding: 1rem;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(216, 12%, 54%, 0.223);
+    color: var(--neu-mediumGrey);
 }
 
 #submitButton {
@@ -91,10 +111,46 @@ li {
 }
 
 .active {
-    background-color: red;
+    background-color: var(--neu-lightGrey);
     color: white;
 }
 
 #thankYouStart {
     display: none;
+}
+
+.thankYouBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#thankYouImg {
+    margin: 1rem 0rem 0.5rem 0rem;
+}
+
+#insertRating {
+    color: var(--pri-orange);
+    font-size: 1rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 20px;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    background-color: hsla(216, 12%, 54%, 0.223);
+}
+
+h2 {
+    color: var(--neu-white);
+    margin: 0.5rem 0rem;
+}
+
+p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0.5rem 0rem 1rem;
+}
+
+footer {
+    color: var(--neu-mediumGrey)
 }

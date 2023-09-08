@@ -7,11 +7,10 @@ const submitButton = document.getElementById('submitButton');
 const ratingOption = document.getElementById('ratingOption');
 const ratingBtn = ratingOption.getElementsByClassName('ratingButton');
 
+const activeRatingSelected = document.getElementsByClassName('ratingButton active');
+
 const selectedRating = document.getElementsByClassName('active');
 const thankYouRating = document.getElementById('ratingNumber');
-
-
-
 
 //Setting the active class. 
 for (let i = 0; i < ratingBtn.length; i++) {
@@ -25,17 +24,15 @@ for (let i = 0; i < ratingBtn.length; i++) {
     }, false);
 }
 
-
-
-
-
-
-
 /* Submit button rating -> thank you */
 submitButton.addEventListener('click', submitFunction);
 
 function submitFunction() {
-    ratingStart.style.display = 'none';
-    thankYouStart.style.display = 'flex';
-    thankYouStart.style.flexDirection = 'column';
+    if (activeRatingSelected.length === 1) {
+        ratingStart.style.display = 'none';
+        thankYouStart.style.display = 'flex';
+        thankYouStart.style.flexDirection = 'column';
+    } else {
+        alert('Please, give us a rating!');
+    }
 }
