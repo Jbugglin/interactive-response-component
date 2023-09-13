@@ -5,7 +5,7 @@
     --neu-white: hsl(0, 0%, 100%);
     --neu-lightGrey: hsl(217, 12%, 63%);
     --neu-mediumGrey: hsl(216, 12%, 54%);
-    --neu-darkBlue: hsl(213, 19%, 18%);
+    --neu-darkBlue: hsla(213, 20%, 18%, 0.762);
     --neu-veryDarkBlue: hsl(216, 12%, 8%);
 }
 
@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Overpass', sans-serif;
-    font-size: 15px;
 }
 
 body {
@@ -50,34 +49,36 @@ main {
 }
 
 .starIcon {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     scale: 0.75;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin: 0.5rem 0rem;
     background-color: hsla(216, 12%, 54%, 0.223);
+    translate: -7px;
 }
 
 h1 {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--neu-white);
+    margin: 0.5rem 0rem;
 }
 
-p {
+#pRating {
     font-weight: 400;
+    font-size: 0.875rem;
     color: var(--neu-lightGrey);
+    margin: 0.5rem 0rem 1rem 0rem;
 }
 
 #ratingOption {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0rem;
-    /* This needs adjusted. */
+    margin: 1rem 0rem 0.75rem 0rem;
 }
 
 #ratingOption li:hover {
@@ -89,24 +90,28 @@ p {
 li {
     list-style-type: none;
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: hsla(216, 12%, 54%, 0.223);
     color: var(--neu-mediumGrey);
+    font-size: 0.875rem;
+    font-weight: 700;
 }
 
 #submitButton {
-    width: 90%;
-    height: 2.25rem;
-    border-radius: 1.25rem;
+    width: 100%;
+    height: 2.75rem;
+    border-radius: 1.375rem;
     border: none;
     background-color: var(--pri-orange);
     color: var(--neu-white);
-    margin: auto;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
+    letter-spacing: 0.125rem;
+    font-size: 0.875rem;
+    font-weight: 700;
 }
 
 #submitButton:hover {
@@ -138,22 +143,32 @@ li {
 
 #insertRating {
     color: var(--pri-orange);
-    font-size: 1rem;
-    padding: 0.25rem 0.625rem;
+    font-size: 0.875rem;
+    max-height: 2rem;
+    padding: 0.326rem 0.75rem;
     border-radius: 20px;
     margin: 0.5rem 0rem 0.5rem 0rem;
     background-color: hsla(216, 12%, 54%, 0.223);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#thankYouImg {
+    padding: 0.625rem;
 }
 
 h2 {
     color: var(--neu-white);
-    margin: 0.5rem 0rem;
+    margin: 1rem 0rem 0.25rem 0rem;
 }
 
-p {
-    font-size: 0.95rem;
+#pThankyou {
+    font-size: 0.875rem;
     line-height: 1.5;
     margin: 0.5rem 0rem 1rem;
+    color: var(--neu-lightGrey);
 }
 
 footer {
